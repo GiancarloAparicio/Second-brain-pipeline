@@ -1,0 +1,151 @@
+/* ───────────────────────────────────────────────────
+<< Pseudo-Spoiler-Tag
+─────────────────────────────────────────────────── */
+
+.theme-light {
+	/* stylelint-disable-line no-duplicate-selectors */
+	--spoiler-bg: hsl(0 0% 7%);
+}
+
+.theme-dark {
+	/* stylelint-disable-line no-duplicate-selectors */
+	--spoiler-bg: hsl(0 0% 93%);
+}
+
+.cm-line:not(.cm-active) .cm-em.cm-strikethrough,
+em > del {
+	font-style: initial;
+	text-decoration: unset;
+	color: var(--spoiler-bg);
+	background-color: var(--spoiler-bg);
+	transition: var(--slow-transition);
+}
+
+em > del:hover,
+.cm-active .cm-em.cm-strikethrough,
+.cm-em.cm-strikethrough:hover {
+	background-color: var(--bg3) !important;
+	transition: 400ms ease-in-out;
+}
+
+/* ───────────────────────────────────────────────────
+<< Strikethroughs
+─────────────────────────────────────────────────── */
+
+/* make the "~" readable */
+.cm-formatting-strikethrough {
+	text-decoration: none;
+}
+
+/* ───────────────────────────────────────────────────
+<< Pandoc Citations
+─────────────────────────────────────────────────── */
+
+/* applies to all []-links (barelinks)
+partially also to footnotes */
+body:not(.no-pandoc-citation-emphasis) .cm-hmd-barelink {
+	color: var(--reference-color);
+}
+
+body:not(.no-pandoc-citation-emphasis) .cm-link.cm-quote.cm-hmd-barelink {
+	color: var(--reference-color) !important;
+}
+
+/* ───────────────────────────────────────────────────
+<< Footnotes
+─────────────────────────────────────────────────── */
+
+/* Preview Mode */
+.footnotes hr {
+	margin-top: 60px;
+	margin-bottom: 0;
+}
+
+.footnotes {
+	font-size: var(--footnote-size);
+	line-height: 1.15em;
+	text-align: justify;
+	hyphens: auto;
+}
+
+.footnotes ol {
+	padding-inline-start: 1em;
+}
+
+.footnotes li {
+	padding-bottom: 0.8em;
+}
+
+.footnote-backref {
+	padding-left: 5px;
+}
+
+.footnotes li::marker {
+	color: var(--text-faint);
+}
+
+/* Edit Mode */
+.cm-s-obsidian .cm-line .cm-footref {
+	color: var(--reference-color);
+}
+
+/* footnotes (at the bottom) */
+.HyperMD-footnote.cm-line,
+.HyperMD-footnote.CodeMirror-line {
+	font-size: 85%;
+	line-height: 1.15em;
+	text-align: justify;
+	hyphens: auto;
+	padding: 0.4em 5px;
+}
+
+/* separator line above the first footnote */
+.cm-line:not(.HyperMD-footnote) + .HyperMD-footnote {
+	padding-top: 0.8em;
+	border-top: var(--muted-border);
+}
+
+/* remove underline which only decreases readability */
+.markdown-preview-view a.footnote-link {
+	text-decoration: none;
+}
+
+/* CM5: in-text-reference */
+span.cm-link.cm-hmd-footnote {
+	color: var(--reference-color) !important;
+	vertical-align: top;
+}
+
+/* <<< Footnote Indicator in Gutter */
+body:not(.no-fn-indicator) .footnote-link:not(.footnote-backref)::before,
+body:not(.no-fn-indicator) .mod-cm6.cm-s-obsidian span.cm-footref.cm-formatting::before {
+	content: '⦿';
+
+	font-size: 1rem;
+	line-height: 1rem;
+
+	color: var(--reference-color);
+	background-color: var(--background-primary);
+
+	position: absolute;
+	left: 15px;
+
+	padding: 0 3px;
+	margin-top: 3px;
+}
+
+.numbered-fn-indicator .view-content {
+	counter-reset: footnote;
+}
+
+body.numbered-fn-indicator .mod-cm6 .footnote-link:not(.footnote-backref)::before,
+body.numbered-fn-indicator .mod-cm6.cm-s-obsidian span.cm-footref.cm-formatting::before {
+	content: '^' counter(footnote);
+	font-size: 0.8rem;
+	margin-top: 5px;
+	counter-increment: footnote;
+}
+
+body:not(.no-fn-indicator) .mod-cm6 .cm-hmd-barelink:not(.cm-formatting-link) + .cm-footref.cm-formatting::before {
+	display: none;
+}

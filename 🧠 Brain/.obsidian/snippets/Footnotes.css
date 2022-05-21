@@ -1,0 +1,28 @@
+/* Footnote styling - works for me w/ inline footnotes */
+.footnotes-list {
+	font-size: 12px;
+}
+.markdown-preview-section .footnotes {
+	font-size: 80%;
+}
+.footnotes p {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.is-flashing {
+	transition: background-color 1s ease;
+	background-color: orange;
+}
+
+a.footnote-link {
+	color: var(--base2);
+}
+
+/* Setting the gap above and below a hor. footnote line
+/* if this code block is deleted from your CSS file, the space above and below the footnote line jumps up, but changing the px values has no effect
+/* footnote lines gaps can also be set with a general hr rule - see section Lines */
+.markdown-preview-view .footnotes hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

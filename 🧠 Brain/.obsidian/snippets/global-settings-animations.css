@@ -1,0 +1,42 @@
+/* ───────────────────────────────────────────────────
+<< GLobal Filter
+─────────────────────────────────────────────────── */
+
+.grayscale {
+	filter: grayscale(0.85);
+}
+.sepia {
+	filter: sepia(0.85);
+}
+
+/* ───────────────────────────────────────────────────
+
+<< Angular or Round Shapes
+─────────────────────────────────────────────────── */
+
+body:not(.angular-shapes) {
+	/* stylelint-disable-line no-duplicate-selectors */
+	--roundish: 7px;
+	--round: 50px;
+}
+
+body.angular-shapes {
+	--roundish: 0;
+	--round: 0;
+}
+
+/* ───────────────────────────────────────────────────
+<< Animations
+─────────────────────────────────────────────────── */
+
+body:not(.no-animations) {
+	--quick-transition: 200ms ease-in-out;
+	--medium-transition: 350ms ease-in-out;
+	--slow-transition: 600ms ease-in-out;
+}
+
+body.no-animations {
+	--quick-transition: 0;
+	--medium-transition: 0;
+	--slow-transition: 0;
+}

@@ -1,0 +1,15 @@
+.image-embed[alt]:after {
+	content: attr(alt);
+	display: block;
+	margin: 0.2rem 2rem 0.2rem 2rem;
+	text-align: center;
+	font-size: 90%;
+	line-height: 1.5;
+	color: var(--text-faint);
+	font-family: var(--font-monospace);
+}
+
+.image-embed[alt*='Untitled']:after,
+.image-embed[alt*='Pasted image']:after {
+	display: none !important;
+}

@@ -1,0 +1,18 @@
+[mdzk]
+backlinks-header = "Backlinks"
+authors = ["Ramos Aparicio"]
+language = "es"
+multilingual = false
+src = "🧠 brain"
+title = "🧠 Brain"
+ignore = [
+    "🧠 Brain/300 - 🗄️ Resources/370 - 🛕 Templates",
+    "🧠 Brain/.obsidian/",
+]
+
+[output.html]
+site-url = "/brain"
+no-section-label = true
+
+[output.html.fold]
+enable = true

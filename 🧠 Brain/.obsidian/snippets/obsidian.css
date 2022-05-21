@@ -1,0 +1,413 @@
+.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
+	background-color: transparent;
+}
+
+div[class^='note-'] {
+	padding: 15px !important;
+	border: 1px solid transparent !important;
+	border-color: transparent !important;
+	margin-bottom: 20px !important;
+	border-radius: 4px !important;
+}
+
+/*
+div[class^='note-']::first-line {
+	font-weight: bold !important;
+}
+*/
+
+.note-danger {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.note-info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+.note-warn {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+
+.note-success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+
+/**
+ * Quote
+ * */
+
+blockquote {
+	color: #8a6d3b !important;
+	background-color: #fcf8e3 !important;
+	border-color: #faebcc !important;
+}
+
+.HyperMD-quote {
+	color: #8a6d3b !important;
+	background-color: #fcf8e3 !important;
+	border-color: #faebcc !important;
+	/*padding: 8px 15px !important;*/
+}
+
+/**
+ * headers
+ * */
+
+.HyperMD-[class^='HyperMD--'] {
+	content: ' ' !important;
+	display: block !important;
+	background-color: #929292 !important;
+	height: 3px !important;
+	width: 100% !important;
+}
+
+h1,
+.HyperMD-header.HyperMD-header-1.cm-line,
+.HyperMD-.HyperMD--1 {
+	background-color: #e7f3f8 !important;
+}
+
+h2,
+.HyperMD-header.HyperMD-header-2.cm-line,
+.HyperMD-.HyperMD--2 {
+	background-color: #fdebec !important;
+}
+
+h3,
+.HyperMD-header.HyperMD-header-3.cm-line,
+.HyperMD-.HyperMD--3 {
+	background-color: #f4edfa !important;
+}
+
+h4,
+.HyperMD-header.HyperMD-header-4.cm-line,
+.HyperMD-.HyperMD--4 {
+	background-color: #edfcf1 !important;
+}
+
+h5,
+.HyperMD-header.HyperMD-header-5.cm-line,
+.HyperMD-.HyperMD--5 {
+	background-color: #f5d3ac69 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 10px 0 !important;
+	padding: 5px;
+}
+
+/* Vista previa mas grande */
+/* get more snippets at https://github.com/kmaasrud/awesome-obsidian */
+/* author: https://github.com/cannibalox & https://github.com/konhi */
+/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/82 */
+
+.popover.hover-popover {
+	transform: scale(0.8); /* makes the content smaller */
+	max-height: 800px; /* was 300 */
+	min-height: 100px;
+	width: 500px; /* was 400 */
+}
+
+.popover.hover-popover .markdown-embed {
+	height: 800px;
+}
+
+/* Scrollbar pequeño*/
+/* get more snippets at https://github.com/kmaasrud/awesome-obsidian */
+/* author: https://forum.obsidian.md/u/rsdimitrov */
+/* source: https://forum.obsidian.md/t/optimize-obsidian-ui-for-a-more-seamless-experience/155/5 */
+
+/* smaller scrollbar */
+.CodeMirror-vscrollbar,
+.CodeMirror-hscrollbar,
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+/* get more snippets at https://github.com/kmaasrud/awesome-obsidian */
+/* author: https://github.com/deathau */
+/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/2 */
+
+.cm-hmd-list-indent .cm-tab,
+ul ul {
+	position: relative;
+}
+.cm-hmd-list-indent .cm-tab::before,
+ul ul::before {
+	content: '';
+	border-left: 1px solid rgba(0, 122, 255, 0.25);
+	position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before {
+	left: 0;
+	top: -5px;
+	bottom: -4px;
+}
+ul ul::before {
+	left: -11px;
+	top: 0;
+	bottom: 0;
+}
+
+/* get more snippets at https://github.com/kmaasrud/awesome-obsidian */
+/* author: https://forum.obsidian.md/u/rsdimitrov */
+/* source: https://forum.obsidian.md/t/optimize-obsidian-ui-for-a-more-seamless-experience/155/5 */
+
+/* change opacity to 0 if you want controls to fade completely */
+/* auto fades note  controlls */
+.view-:not(:hover) .view-actions {
+	opacity: 0.1;
+	transition: opacity 0.2s ease-in-out;
+}
+
+/* auto fades status bar items */
+.status-bar:not(:hover) .status-bar-item {
+	opacity: 0.25;
+	transition: opacity 0.2s ease-in-out;
+}
+
+/* get more snippets at https://github.com/kmaasrud/awesome-obsidian */
+/* author: https://forum.obsidian.md/u/uzerper */
+/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/72 */
+
+.tag:not(.token) {
+	background-color: var(--text-accent);
+	border: none;
+	color: white;
+	font-size: 11px;
+	padding: 1px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0px 0px;
+	cursor: pointer;
+	border-radius: 14px;
+}
+.tag:not(.token):hover {
+	color: white;
+	background-color: var(--text-accent-hover);
+}
+
+span.cm-tag-CNN,
+.tag[href^='#CNN'] {
+	background-color: #efef03 !important;
+}
+
+span.cm-tag-linux,
+.tag[href^='#linux'] {
+	background-color: #66b2ff !important;
+}
+
+span.cm-tag-agile,
+.tag[href^='#agile'] {
+	background-color: #ff99cc !important;
+}
+
+span.cm-tag-hacking,
+.tag[href^='#hacking'] {
+	background-color: #cc0066 !important;
+}
+
+span.cm-tag-docker,
+.tag[href^='#docker'] {
+	background-color: #8f98ee !important;
+}
+
+span.cm-tag-machine-learning,
+.tag[href^='#machine-learning'] {
+	background-color: #8fe1ee !important;
+}
+
+span.cm-tag-laravel,
+.tag[href^='#laravel'] {
+	background-color: #eec48f !important;
+}
+
+span.cm-tag-daily,
+.tag[href^='#daily'] {
+	background-color: #8fee98 !important;
+}
+
+span.cm-tag-obsidian,
+.tag[href^='#obsidian'],
+span.cm-tag-backlog,
+.tag[href^='#backlog'] {
+	background-color: #5c49c4 !important;
+}
+
+span.cm-tag-important,
+.tag[href^='#important'] {
+	background-color: red !important;
+}
+
+span.cm-tag-complete,
+.tag[href^='#complete'] {
+	background-color: green !important;
+}
+
+span.cm-tag-nginx,
+.tag[href^='#nginx'] {
+	background-color: #606060 !important;
+}
+
+span.cm-tag-cancelled,
+.tag[href^='#cancelled'] {
+	background-color: #a0a0a0 !important;
+}
+
+span.cm-tag-inprogress,
+.tag[href^='#inprogress'] {
+	background-color: orange !important;
+}
+
+span.cm-tag-TDD,
+.tag[href^='#TDD'] {
+	background-color: #cc0066 !important;
+}
+
+span.cm-tag-ATDD,
+.tag[href^='#ATDD'] {
+	background-color: #8f98ee !important;
+}
+
+span.cm-tag-user-story,
+.tag[href^='#user-story'] {
+	background-color: #8fe1ee !important;
+}
+
+span.cm-tag-anki,
+.tag[href^='#anki'],
+span.cm-tag-anki-reverse,
+.tag[href^='#anki-reverse'],
+span.cm-tag-anki-cloze,
+.tag[href^='#anki-cloze'],
+span.cm-tag-anki-inline,
+.tag[href^='#anki-inline'],
+span.cm-tag-anki-list-cloze,
+.tag[href^='#anki-list-cloze'],
+span.cm-tag-anki-list,
+.tag[href^='#anki-list'] {
+	background-color: rgba(0, 122, 255, 0.95) !important;
+}
+
+body:not(.annotation-tags-off) .cm-hashtag-begin.cm-tag-anki::before,
+body:not(.annotation-tags-off) .cm-hashtag-begin.cm-tag-anki-reverse::before,
+body:not(.annotation-tags-off) .cm-hashtag-begin.cm-tag-anki-cloze::before,
+body:not(.annotation-tags-off) .cm-hashtag-begin.cm-tag-anki-inline::before,
+body:not(.annotation-tags-off) .cm-hashtag-begin.cm-tag-anki-list-cloze::before,
+body:not(.annotation-tags-off) .cm-hashtag-begin.cm-tag-anki-list::before,
+body:not(.annotation-tags-off) .tag[href^='#anki']::before {
+	content: '🧠 ';
+}
+
+/*Live preview tags*/
+.cm-s-obsidian span.cm-hashtag.cm-meta {
+	background-color: #d779ff;
+	font-weight: bold !important;
+	color: white !important;
+	font-size: 12px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0px 0px;
+	cursor: pointer;
+}
+
+.cm-s-obsidian span.cm-meta.cm-hashtag-begin {
+	padding-left: 8px;
+	border-radius: 14px 0px 0px 14px !important;
+}
+
+.cm-s-obsidian span.cm-meta.cm-hashtag-end {
+	padding-right: 8px;
+	border-radius: 0px 14px 14px 0px !important;
+}
+
+/*Img center*/
+img {
+	display: block !important;
+	margin: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	img {
+		width: 100% !important;
+	}
+}
+
+/*live preview text code inline*/
+li > code,
+em > code,
+span > code,
+p > code,
+span.cm-inline-code {
+	font-family: 'SFMono-Regular', Menlo, Consolas, 'PT Mono', 'Liberation Mono', Courier, monospace !important;
+	line-height: normal;
+	background: rgba(135, 131, 120, 0.15) !important;
+	color: #eb5757 !important;
+	font-size: 90% !important;
+	padding: 0.3em 0.2em;
+	border-radius: 5px;
+}
+
+/* mermaid */
+div.mermaid svg {
+	width: 100%;
+	height: 70%;
+}
+
+.markdown-source-view.is-live-preview div.mermaid svg {
+	width: 100%;
+	height: 70%;
+}
+
+hr {
+	margin: 0px !important;
+}
+
+.callout-content em,
+span.cm-em,
+span.cm-em span.cm-underline,
+em a.internal-link,
+.admonition .admonition-content em,
+.markdown-preview-view .markdown-preview-section em {
+	/*display: block;*/
+	color: rgb(77, 171, 154) !important;
+}
+
+span.cm-underline {
+	font-family: cursive;
+}
+
+/*Width de la paginas*/
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
+.markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
+	max-width: 970px;
+}
+
+.markdown-preview-view .internal-link {
+	text-decoration: underline !important;
+	cursor: pointer;
+	font-family: cursive;
+}
+
+.ͼ1 .cm-scroller {
+	font-family: monospace;
+	line-height: 1.7;
+}

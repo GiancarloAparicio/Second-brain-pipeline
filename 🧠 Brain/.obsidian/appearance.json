@@ -1,0 +1,8 @@
+{
+  "theme": "moonstone",
+  "cssTheme": "Atom",
+  "enabledCssSnippets": [
+    "obsidian",
+    "custom_tags"
+  ]
+}

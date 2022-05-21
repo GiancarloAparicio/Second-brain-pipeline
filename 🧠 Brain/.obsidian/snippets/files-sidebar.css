@@ -1,0 +1,162 @@
+/* ───────────────────────────────────────────────────
+< Sidebar
+─────────────────────────────────────────────────── */
+.workspace-leaf-content .view-content {
+	padding: 4px 2px;
+}
+
+/* ───────────────────────────────────────────────────
+<< Files in the Sidebar
+─────────────────────────────────────────────────── */
+/* apply to any plugin using file lists,
+not only file explorer */
+
+.search-result-file-title:hover,
+.tree-item-self.is-clickable:hover,
+.nav-file-title.is-active,
+.nav-folder-title.is-active,
+body > .app-container .nav-file-title:hover,
+body > .app-container .nav-folder-title:hover {
+	background-color: var(--bg3);
+	border-radius: var(--roundish);
+}
+
+.nav-file-title,
+.nav-folder-title {
+	line-height: 1.3em;
+	white-space: normal;
+
+	width: 100%;
+
+	color: var(--extra-contrast);
+
+	padding-top: 0;
+	padding-bottom: 1.5px;
+}
+
+/* hover file */
+.nav-folder-title:hover .nav-folder-title-content,
+.nav-file-title:hover .nav-file-title-content {
+	color: var(--alt-accent);
+}
+
+/* active file */
+.nav-file-title.is-active {
+	font-weight: 900;
+	color: var(--text-accent);
+}
+
+.trim-long-filenames .nav-file-title-content,
+.trim-long-filenames .tree-item-inner,
+.trim-long-filenames .search-result-file-title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* ───────────────────────────────────────────────────
+<< Tab Headers
+─────────────────────────────────────────────────── */
+
+/* unset stuff from Obsidian's default theme */
+.workspace-tab-container-after,
+.workspace-tab-container-before {
+	display: none;
+}
+
+body .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+	background-color: transparent;
+}
+
+.workspace-tab-header-container {
+	background-color: transparent;
+}
+
+/* no rounded corners for the sidebar leafs */
+body > .app-container .workspace-split.mod-horizontal > .workspace-tabs > .workspace-leaf {
+	border-radius: 0;
+}
+
+/* tab buttons */
+.workspace-tabs .workspace-tab-header-container {
+	min-height: 39px;
+	padding: 7px 11px 5px;
+	margin: 0;
+	border-bottom: var(--basic-border);
+}
+
+.workspace-tab-header-container .workspace-tab-header {
+	height: 26px;
+
+	background-color: var(--bg3);
+	box-shadow: var(--tab-inset-shadow);
+
+	margin-right: 9px;
+
+	border: var(--thin-border);
+	border-radius: var(--roundish);
+}
+
+.workspace-tab-header.is-active {
+	background-color: var(--bg2);
+	border-radius: var(--roundish);
+}
+
+.workspace-tab-header.is-active svg {
+	color: var(--extra-contrast);
+}
+
+.workspace-tab-header svg {
+	color: var(--text-faint);
+}
+
+.workspace-tab-header-inner {
+	padding: 2px 6px 1px;
+	border-radius: var(--roundish);
+}
+
+/* Navigation buttons */
+.nav-action-button.is-active {
+	background-color: var(--bg3);
+}
+
+.workspace-tab-header-inner:active svg,
+.nav-action-button:active svg,
+.nav-action-button.is-active:active svg,
+.nav-action-button.is-active svg {
+	color: var(--text-accent);
+}
+
+.nav-action-button svg,
+.workspace-tab-header-inner-icon svg {
+	width: 18px;
+	stroke-width: 1.5px;
+}
+
+.nav-header {
+	padding: 8px 5px 0;
+}
+
+.nav-action-button {
+	height: 27px;
+	box-shadow: var(--tab-inset-shadow);
+	padding: 2px 6px 0;
+	border: var(--thin-border);
+	border-radius: var(--roundish);
+}
+
+/* hover & on-click colors */
+.workspace-tab-header:hover svg,
+.nav-action-button:hover svg,
+.nav-action-button.is-active:hover svg {
+	color: var(--alt-accent);
+}
+
+.nav-action-button:hover,
+.nav-action-button.is-active:hover,
+.workspace-tab-header.is-active:hover .workspace-tab-header-inner,
+.workspace-tab-header:hover .workspace-tab-header-inner,
+.workspace-tab-header:hover {
+	background-color: var(--bg1);
+	cursor: pointer;
+}
