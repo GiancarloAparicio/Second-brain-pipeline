@@ -16,10 +16,10 @@ def run_sync_anki(modified_files):
     for file in modified_files:
         file = file.strip()
 
-        print(f"Exits: {file}")
         print(os.path.exists(f"{file}"))
         if os.path.exists(f"{file}"):
             print(f"Exits: {file}")
+            print(f"find cards on file : {file}")
             note = Note.Note(file)
 
             # Create cards basic

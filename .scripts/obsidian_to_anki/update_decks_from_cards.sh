@@ -1,7 +1,8 @@
 #!/bin/bash
 
 noteId=$1
-deck=$2
+vault=$(jq -r .vault config.json)
+deck=$(echo $2 | sed "s/$vault:://g")
 
 echo "ID: $noteId"
 echo "DECK: $deck"

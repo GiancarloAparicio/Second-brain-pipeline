@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install() {
-		echo $@ | xargs -n 1 sudo apt install --fix-missing -y
+	echo $@ | xargs -n 1 sudo apt install --fix-missing -y
 }
 
 OS=$(uname -o)

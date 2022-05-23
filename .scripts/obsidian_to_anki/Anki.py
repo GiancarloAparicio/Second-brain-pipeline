@@ -36,7 +36,7 @@ class Anki:
         deck = (
             fullfile.replace("/", "::")
             .replace(".md", "")
-            .replace(f"${Env.VAULT}::", "")
+            .replace(f"{Env.VAULT}::", "")
         )
         print(f" CHANGE DECK: {deck} ")
         os.system(

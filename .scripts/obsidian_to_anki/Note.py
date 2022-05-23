@@ -9,7 +9,6 @@ class Note:
     def find_cards(self, regexp):
 
         # Open file as file object and read to string
-        print(f"file : {self.fullfile}")
         file = open(f"{self.fullfile}", "r")
 
         # Read file object to string

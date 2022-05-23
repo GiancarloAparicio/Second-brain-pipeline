@@ -1,9 +1,11 @@
 import json
 
+
 def getVault():
     with open('config.json') as file:
         data = json.load(file)
     return data['vault']
+
 
 DEVELOPMENT = False
 ALL_FILES = True
